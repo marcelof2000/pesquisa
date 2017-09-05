@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="ISO-8859-1">
+        <title>PESQUISA</title>
+        <link href="bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="style.css" />
+    </head>
+    <body>
+        
+        <div class="container">
+        
+            <div class="row">
+                
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12 total">
+                    
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+                        </div>
+                    </div>
+                    
+                    <ul id="myUL">
+                        <div class="col-sm-4 col-md-3 col-lg-3 conluna">
+                            <li>
+                                <img class="img-responsive" src="img/m.png">
+                                <a href="#">Dra. Natalia Quintela Saniog Olivetti</a>
+                            </li>
+                        </div>
+                        <div class="col-sm-4 col-md-3 col-lg-3 conluna">
+                            <li>
+                                <img class="img-responsive" src="img/m.png">
+                                <a href="#">Dra. Paola Pretti Nunes Ferreira Falochio</a>
+                            </li>
+                        </div>
+                        <div class="col-sm-4 col-md-3 col-lg-3 conluna">
+                            <li>
+                                <img class="img-responsive" src="img/h.png">
+                                <a href="#">Dr. Cristiano Faria Pisani</a>
+                            </li>
+                        </div>
+                        <div class="col-sm-4 col-md-3 col-lg-3 conluna">
+                            <li>
+                                <img class="img-responsive" src="img/h.png">
+                                <a href="#">Dr. Maurício Scanavacca</a>
+                            </li>
+                        </div>
+                        <div class="col-sm-4 col-md-3 col-lg-3 conluna">
+                            <li>
+                                <img class="img-responsive" src="img/h.png">
+                                <a href="#">Dr. Desiderio Favaratto</a>
+                            </li>
+                        </div>
+                        <div class="col-sm-4 col-md-3 col-lg-3 conluna">
+                            <li>
+                                <img class="img-responsive" src="img/h.png">
+                                <a href="#">Dr. Paulo Rogério Soares</a>
+                            </li>
+                        </div>
+                        <div class="col-sm-4 col-md-3 col-lg-3 conluna">
+                            <li>
+                                <img class="img-responsive" src="img/h.png">
+                                <a href="#">Dr. Antonio de Padua Mansur</a>
+                            </li>
+                        </div>
+                        <div class="col-sm-4 col-md-3 col-lg-3 conluna">
+                            <li>
+                                <img class="img-responsive" src="img/h.png">
+                                <a href="#">Dr. Altamiro Filho Ferraz Osório</a>
+                            </li>
+                        </div>
+                        <div class="col-sm-4 col-md-3 col-lg-3 conluna">
+                            <li>
+                                <img class="img-responsive" src="img/m.png">
+                                <a href="#">Dra. Maria Janieire Alves</a>
+                            </li>
+                        </div>
+                        <div class="col-sm-4 col-md-3 col-lg-3 conluna">
+                            <li>
+                                <img class="img-responsive" src="img/m.png">
+                                <a href="#">Dra. Teresa Yae Takagaki  </a>
+                            </li>
+                        </div>
+                        <div class="col-sm-4 col-md-3 col-lg-3 conluna">
+                            <li>
+                                <img class="img-responsive" src="img/m.png">
+                                <a href="#">Dra. Cynthia Aparecida da Silva Rocha</a>
+                            </li>
+                        </div>
+                        <div class="col-sm-4 col-md-3 col-lg-3 conluna">
+                            <li>
+                                <img class="img-responsive" src="img/m.png">
+                                <a href="#">Dra. Mariana Pinto Wetten</a>
+                            </li>
+                        </div>
+                    </ul>         
+                </div>
+            </div>
+        </div>
+        
+        
+
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="bootstrap-3.3.7/js/bootstrap.min.js"></script>
+        
+        <script>
+            function myFunction() {
+                // Declare variables
+                var input, filter, ul, li, a, i;
+                input = document.getElementById('myInput');
+                filter = input.value.toUpperCase();
+                ul = document.getElementById("myUL");
+                li = ul.getElementsByTagName('li');
+
+                // Loop through all list items, and hide those who don't match the search query
+                for (i = 0; i < li.length; i++) {
+                    a = li[i].getElementsByTagName("a")[0];
+                    if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                        li[i].style.display = "";
+                    } else {
+                        li[i].style.display = "none";
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>
